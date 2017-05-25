@@ -14,6 +14,9 @@
 		969B3CE51ED6F4C4002060F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 969B3CE41ED6F4C4002060F0 /* Assets.xcassets */; };
 		969B3CE81ED6F4C4002060F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 969B3CE61ED6F4C4002060F0 /* LaunchScreen.storyboard */; };
 		969B3CF31ED6F4C4002060F0 /* InstabugCodingTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 969B3CF21ED6F4C4002060F0 /* InstabugCodingTaskTests.m */; };
+		969B3D001ED6F519002060F0 /* InstaNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 969B3CFF1ED6F519002060F0 /* InstaNetworking.m */; };
+		969B3D031ED6F826002060F0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969B3D021ED6F826002060F0 /* SystemConfiguration.framework */; };
+		969B3D071ED6F97B002060F0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 969B3D061ED6F97B002060F0 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		969B3CEE1ED6F4C4002060F0 /* InstabugCodingTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstabugCodingTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		969B3CF21ED6F4C4002060F0 /* InstabugCodingTaskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstabugCodingTaskTests.m; sourceTree = "<group>"; };
 		969B3CF41ED6F4C4002060F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		969B3CFE1ED6F519002060F0 /* InstaNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstaNetworking.h; sourceTree = "<group>"; };
+		969B3CFF1ED6F519002060F0 /* InstaNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstaNetworking.m; sourceTree = "<group>"; };
+		969B3D021ED6F826002060F0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		969B3D051ED6F97B002060F0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../../../../../../Downloads/Reachability/Reachability/Reachability.h; sourceTree = "<group>"; };
+		969B3D061ED6F97B002060F0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../../../../../../Downloads/Reachability/Reachability/Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969B3D031ED6F826002060F0 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +75,7 @@
 				969B3CD71ED6F4C4002060F0 /* InstabugCodingTask */,
 				969B3CF11ED6F4C4002060F0 /* InstabugCodingTaskTests */,
 				969B3CD61ED6F4C4002060F0 /* Products */,
+				969B3D011ED6F826002060F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +91,7 @@
 		969B3CD71ED6F4C4002060F0 /* InstabugCodingTask */ = {
 			isa = PBXGroup;
 			children = (
+				969B3CFD1ED6F4F3002060F0 /* InstaNetworking */,
 				969B3CDB1ED6F4C4002060F0 /* AppDelegate.h */,
 				969B3CDC1ED6F4C4002060F0 /* AppDelegate.m */,
 				969B3CDE1ED6F4C4002060F0 /* ViewController.h */,
@@ -109,6 +120,33 @@
 				969B3CF41ED6F4C4002060F0 /* Info.plist */,
 			);
 			path = InstabugCodingTaskTests;
+			sourceTree = "<group>";
+		};
+		969B3CFD1ED6F4F3002060F0 /* InstaNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				969B3D041ED6F959002060F0 /* Reachability */,
+				969B3CFE1ED6F519002060F0 /* InstaNetworking.h */,
+				969B3CFF1ED6F519002060F0 /* InstaNetworking.m */,
+			);
+			name = InstaNetworking;
+			sourceTree = "<group>";
+		};
+		969B3D011ED6F826002060F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				969B3D021ED6F826002060F0 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		969B3D041ED6F959002060F0 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				969B3D051ED6F97B002060F0 /* Reachability.h */,
+				969B3D061ED6F97B002060F0 /* Reachability.m */,
+			);
+			name = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +198,7 @@
 				TargetAttributes = {
 					969B3CD41ED6F4C4002060F0 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5NWFT59D4Q;
 						ProvisioningStyle = Automatic;
 					};
 					969B3CED1ED6F4C4002060F0 = {
@@ -216,6 +255,8 @@
 				969B3CE01ED6F4C4002060F0 /* ViewController.m in Sources */,
 				969B3CDD1ED6F4C4002060F0 /* AppDelegate.m in Sources */,
 				969B3CDA1ED6F4C4002060F0 /* main.m in Sources */,
+				969B3D001ED6F519002060F0 /* InstaNetworking.m in Sources */,
+				969B3D071ED6F97B002060F0 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,9 +392,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5NWFT59D4Q;
 				INFOPLIST_FILE = InstabugCodingTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.khattab.test.InstabugCodingTask;
+				PRODUCT_BUNDLE_IDENTIFIER = com.khattab.InstabugCodingTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -362,9 +404,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5NWFT59D4Q;
 				INFOPLIST_FILE = InstabugCodingTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.khattab.test.InstabugCodingTask;
+				PRODUCT_BUNDLE_IDENTIFIER = com.khattab.InstabugCodingTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "InstaNetworking.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) InstaNetworking *iNetwork;
 
 @end
 
@@ -16,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    _iNetwork = [[InstaNetworking alloc] init];
 }
 
 
