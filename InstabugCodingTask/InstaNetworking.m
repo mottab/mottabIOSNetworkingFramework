@@ -25,7 +25,12 @@
 }
 
 -(void)fireRequest:(NSURL *)url parameters:(NSDictionary *)params andVerb:(Method)verb withCompletionBlock:(myCompletion) compBlock {
-    
+    NSDate *date = [NSDate date];
+    _mOperation = [[MyOpeation alloc] initWithURL:url parameters:params verb:verb andIdentifier:[NSString stringWithFormat:@"%f", [date timeIntervalSince1970]]];
+    [_mOperation setCompletionBlock:^(NSDictionary *response) {
+        compBlock(response);
+    }];
+    [_opQueue addOperation:_mOperation];
 }
 
 -(void)reachabilityChanged {

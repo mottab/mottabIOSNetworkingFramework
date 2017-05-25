@@ -17,6 +17,7 @@
 		969B3D001ED6F519002060F0 /* InstaNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 969B3CFF1ED6F519002060F0 /* InstaNetworking.m */; };
 		969B3D031ED6F826002060F0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969B3D021ED6F826002060F0 /* SystemConfiguration.framework */; };
 		969B3D071ED6F97B002060F0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 969B3D061ED6F97B002060F0 /* Reachability.m */; };
+		969B3D0A1ED6FEA1002060F0 /* MyOpeation.m in Sources */ = {isa = PBXBuildFile; fileRef = 969B3D091ED6FEA1002060F0 /* MyOpeation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,9 @@
 		969B3D021ED6F826002060F0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		969B3D051ED6F97B002060F0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../../../../../../Downloads/Reachability/Reachability/Reachability.h; sourceTree = "<group>"; };
 		969B3D061ED6F97B002060F0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../../../../../../Downloads/Reachability/Reachability/Reachability.m; sourceTree = "<group>"; };
+		969B3D081ED6FEA1002060F0 /* MyOpeation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOpeation.h; sourceTree = "<group>"; };
+		969B3D091ED6FEA1002060F0 /* MyOpeation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOpeation.m; sourceTree = "<group>"; };
+		969B3D0B1ED6FF84002060F0 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,9 +129,12 @@
 		969B3CFD1ED6F4F3002060F0 /* InstaNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				969B3D0B1ED6FF84002060F0 /* Constants.h */,
 				969B3D041ED6F959002060F0 /* Reachability */,
 				969B3CFE1ED6F519002060F0 /* InstaNetworking.h */,
 				969B3CFF1ED6F519002060F0 /* InstaNetworking.m */,
+				969B3D081ED6FEA1002060F0 /* MyOpeation.h */,
+				969B3D091ED6FEA1002060F0 /* MyOpeation.m */,
 			);
 			name = InstaNetworking;
 			sourceTree = "<group>";
@@ -252,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969B3D0A1ED6FEA1002060F0 /* MyOpeation.m in Sources */,
 				969B3CE01ED6F4C4002060F0 /* ViewController.m in Sources */,
 				969B3CDD1ED6F4C4002060F0 /* AppDelegate.m in Sources */,
 				969B3CDA1ED6F4C4002060F0 /* main.m in Sources */,
@@ -455,6 +463,7 @@
 				969B3CF91ED6F4C4002060F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		969B3CFA1ED6F4C4002060F0 /* Build configuration list for PBXNativeTarget "InstabugCodingTaskTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +472,7 @@
 				969B3CFC1ED6F4C4002060F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

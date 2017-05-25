@@ -10,6 +10,8 @@
 
 @interface AppDelegate ()
 
+@property (nonatomic) UIBackgroundTaskIdentifier backgroundTask;
+
 @end
 
 @implementation AppDelegate
@@ -17,6 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setupBackgrounding];
     return YES;
 }
 
@@ -47,5 +50,38 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+//for background fetch
+//http://stackoverflow.com/questions/9738488/run-app-for-more-than-10-minutes-in-background
+
+
+- (void)setupBackgrounding {
+    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(appBackgrounding:)
+                                                 name: UIApplicationDidEnterBackgroundNotification
+                                               object: nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(appForegrounding:)
+                                                 name: UIApplicationWillEnterForegroundNotification
+                                               object: nil];
+}
+
+- (void)appBackgrounding: (NSNotification *)notification {
+    [self keepAlive];
+}
+
+- (void) keepAlive {
+    self.backgroundTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        [[UIApplication sharedApplication] endBackgroundTask:self.backgroundTask];
+        self.backgroundTask = UIBackgroundTaskInvalid;
+        [self keepAlive];
+    }];
+}
+
+- (void)appForegrounding: (NSNotification *)notification {
+    if (self.backgroundTask != UIBackgroundTaskInvalid) {
+        [[UIApplication sharedApplication] endBackgroundTask:self.backgroundTask];
+        self.backgroundTask = UIBackgroundTaskInvalid;
+    }
+}
+
+//http://www.appcoda.com/background-transfer-service-ios7/
 
 @end

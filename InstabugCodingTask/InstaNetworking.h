@@ -9,13 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 #import "Reachability.h"
-
-typedef enum {
-    POST,
-    GET,
-    PUT,
-    DELETE
-} Method;
+#import "MyOpeation.h"
 
 typedef void(^myCompletion)(NSDictionary*);
 
@@ -24,7 +18,7 @@ typedef void(^myCompletion)(NSDictionary*);
     Reachability* reachability;
 }
 @property (nonatomic, strong) NSOperationQueue *opQueue;
-
+@property (nonatomic, strong) MyOpeation *mOperation;
 -(void)fireRequest:(NSURL *)url parameters:(NSDictionary *)params andVerb:(Method)verb withCompletionBlock:(myCompletion) compBlock;
 
 @end
