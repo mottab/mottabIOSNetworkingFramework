@@ -117,7 +117,7 @@
     return finished;
 }
 
-- (void)completeOperationWithBlock:(NSDictionary*) dict{
+- (void)completeOperationWithBlock:(NSDictionary*)dict andError:(NSError *)error {
     [self willChangeValueForKey:@"isFinished"];
     [self willChangeValueForKey:@"isExecuting"];
     
@@ -125,13 +125,13 @@
     finished = YES;
     //(myCompletion)dict
     if(self.myCompletionBlock)
-        self.myCompletionBlock(dict);
+        self.myCompletionBlock(dict, error);
     
     [self didChangeValueForKey:@"isExecuting"];
     [self didChangeValueForKey:@"isFinished"];
 }
 
-- (void)setCompletionBlock:(void(^)(NSDictionary* response))finishBlock {
+- (void)setCompletionBlock:(void(^)(NSDictionary* response, NSError * error))finishBlock {
     self.myCompletionBlock = finishBlock;
 }
 
@@ -148,12 +148,12 @@
     NSDictionary *response = [NSJSONSerialization JSONObjectWithData:_responseData options:0 error:nil];
     if (response) {
         //NSLog(@"response = %@", response);
-        [self completeOperationWithBlock:response];
+        [self completeOperationWithBlock:response andError:error];
     } else {
         NSString *responseString = [[NSString alloc] initWithData:_responseData encoding:NSASCIIStringEncoding];
         //NSLog(@"responseData = %@", responseString);
         NSDictionary *dic = [NSDictionary dictionaryWithObject:responseString forKey:@"text/html"];
-        [self completeOperationWithBlock:dic];
+        [self completeOperationWithBlock:dic andError:error];
     }
 }
 

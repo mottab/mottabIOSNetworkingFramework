@@ -27,6 +27,6 @@
 @property (copy, nonatomic) myCompletion myCompletionBlock;
 
 -(id)initWithURL:(NSURL *)url parameters:(NSDictionary *)parameters verb:(Method)verb andIdentifier:(NSString *)idntf;
-- (void)setCompletionBlock:(void(^)(NSDictionary* response))finishBlock;
+- (void)setCompletionBlock:(void(^)(NSDictionary* response, NSError *error))finishBlock;
 
 @end

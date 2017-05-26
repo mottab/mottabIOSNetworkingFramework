@@ -16,6 +16,5 @@ typedef enum {
     DELETE
 } Method;
 
-typedef void(^myCompletion)(NSDictionary* response);
-
+typedef void(^myCompletion)(NSDictionary * response, NSError * error);
 #endif /* Constants_h */

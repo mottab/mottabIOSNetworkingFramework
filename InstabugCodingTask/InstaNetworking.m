@@ -10,6 +10,8 @@
 
 @implementation InstaNetworking
 
+static UIBackgroundTaskIdentifier backgroundTask;
+
 -(id)init {
     if(self = [super init]) {
         _opQueue = [[NSOperationQueue alloc] init];
@@ -27,8 +29,8 @@
 -(void)fireRequest:(NSURL *)url parameters:(NSDictionary *)params andVerb:(Method)verb withCompletionBlock:(myCompletion) compBlock {
     NSDate *date = [NSDate date];
     _mOperation = [[MyOpeation alloc] initWithURL:url parameters:params verb:verb andIdentifier:[NSString stringWithFormat:@"%f", [date timeIntervalSince1970]]];
-    [_mOperation setCompletionBlock:^(NSDictionary *response) {
-        compBlock(response);
+    [_mOperation setCompletionBlock:^(NSDictionary *response, NSError * error) {
+        compBlock(response, error);
     }];
     [_opQueue addOperation:_mOperation];
 }
@@ -45,6 +47,37 @@
     else if (remoteHostStatus == ReachableViaWWAN) {
         // 3G
         _opQueue.maxConcurrentOperationCount = 2;
+    }
+}
+
+/*
+ Class Methods for background refresh
+ */
++ (void)setupBackgroundNetworking {
+    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(appBackgrounding:)
+                                                 name: UIApplicationDidEnterBackgroundNotification
+                                               object: nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(appForegrounding:)
+                                                 name: UIApplicationWillEnterForegroundNotification
+                                               object: nil];
+}
+
++ (void)appBackgrounding: (NSNotification *)notification {
+    [self keepAlive];
+}
+
++ (void) keepAlive {
+    backgroundTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        [[UIApplication sharedApplication] endBackgroundTask:backgroundTask];
+        backgroundTask = UIBackgroundTaskInvalid;
+        [self keepAlive];
+    }];
+}
+
++ (void)appForegrounding: (NSNotification *)notification {
+    if (backgroundTask != UIBackgroundTaskInvalid) {
+        [[UIApplication sharedApplication] endBackgroundTask:backgroundTask];
+        backgroundTask = UIBackgroundTaskInvalid;
     }
 }
 

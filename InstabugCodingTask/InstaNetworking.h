@@ -11,14 +11,20 @@
 #import "Reachability.h"
 #import "MyOpeation.h"
 
-typedef void(^myCompletion)(NSDictionary*);
-
 @interface InstaNetworking : NSObject
 {
     Reachability* reachability;
 }
 @property (nonatomic, strong) NSOperationQueue *opQueue;
 @property (nonatomic, strong) MyOpeation *mOperation;
+/// FireRequest function is requested everytime the developer needs to make HTTP URL Request
+///
+/// - parameter url2: url of the http link, like http://www.google.com
+/// - parameter params: dictionary of the request as key-value pairs
+/// - parameter verb: http method or verb is a Method enum type
+/// - parameter compBlock: the completion block fired with the response object returned from the request
+///
+/// - returns: void, nothing is returned from this function
 -(void)fireRequest:(NSURL *)url parameters:(NSDictionary *)params andVerb:(Method)verb withCompletionBlock:(myCompletion) compBlock;
-
++ (void)setupBackgroundNetworking;
 @end
