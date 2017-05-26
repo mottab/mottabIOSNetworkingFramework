@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InstaImageView.h"
+
 
 @interface ViewController : UIViewController
 
+@property (nonatomic) IBOutlet InstaImageView *imgV;
 
 @end
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		961F95951ED85BB0001CFC14 /* InstaNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 961F95941ED85BB0001CFC14 /* InstaNetworkingTests.m */; };
+		961F959F1ED871F4001CFC14 /* InstaImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 961F959E1ED871F4001CFC14 /* InstaImageView.m */; };
 		969B3CDA1ED6F4C4002060F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 969B3CD91ED6F4C4002060F0 /* main.m */; };
 		969B3CDD1ED6F4C4002060F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 969B3CDC1ED6F4C4002060F0 /* AppDelegate.m */; };
 		969B3CE01ED6F4C4002060F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969B3CDF1ED6F4C4002060F0 /* ViewController.m */; };
@@ -33,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		961F95941ED85BB0001CFC14 /* InstaNetworkingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstaNetworkingTests.m; sourceTree = "<group>"; };
+		961F959D1ED871F4001CFC14 /* InstaImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstaImageView.h; sourceTree = "<group>"; };
+		961F959E1ED871F4001CFC14 /* InstaImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstaImageView.m; sourceTree = "<group>"; };
 		969B3CD51ED6F4C4002060F0 /* InstabugCodingTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstabugCodingTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		969B3CD91ED6F4C4002060F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		969B3CDB1ED6F4C4002060F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				969B3CFF1ED6F519002060F0 /* InstaNetworking.m */,
 				969B3D081ED6FEA1002060F0 /* MyOpeation.h */,
 				969B3D091ED6FEA1002060F0 /* MyOpeation.m */,
+				961F959D1ED871F4001CFC14 /* InstaImageView.h */,
+				961F959E1ED871F4001CFC14 /* InstaImageView.m */,
 			);
 			name = InstaNetworking;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 				969B3D0A1ED6FEA1002060F0 /* MyOpeation.m in Sources */,
 				969B3CE01ED6F4C4002060F0 /* ViewController.m in Sources */,
 				969B3CDD1ED6F4C4002060F0 /* AppDelegate.m in Sources */,
+				961F959F1ED871F4001CFC14 /* InstaImageView.m in Sources */,
 				969B3CDA1ED6F4C4002060F0 /* main.m in Sources */,
 				969B3D001ED6F519002060F0 /* InstaNetworking.m in Sources */,
 				969B3D071ED6F97B002060F0 /* Reachability.m in Sources */,
@@ -406,6 +412,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5NWFT59D4Q;
 				INFOPLIST_FILE = InstabugCodingTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.khattab.InstabugCodingTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -418,6 +425,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5NWFT59D4Q;
 				INFOPLIST_FILE = InstabugCodingTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.khattab.InstabugCodingTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
