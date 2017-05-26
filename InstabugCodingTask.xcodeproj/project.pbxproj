@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		961F95951ED85BB0001CFC14 /* InstaNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 961F95941ED85BB0001CFC14 /* InstaNetworkingTests.m */; };
 		969B3CDA1ED6F4C4002060F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 969B3CD91ED6F4C4002060F0 /* main.m */; };
 		969B3CDD1ED6F4C4002060F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 969B3CDC1ED6F4C4002060F0 /* AppDelegate.m */; };
 		969B3CE01ED6F4C4002060F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969B3CDF1ED6F4C4002060F0 /* ViewController.m */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		961F95941ED85BB0001CFC14 /* InstaNetworkingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstaNetworkingTests.m; sourceTree = "<group>"; };
 		969B3CD51ED6F4C4002060F0 /* InstabugCodingTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstabugCodingTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		969B3CD91ED6F4C4002060F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		969B3CDB1ED6F4C4002060F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				969B3CF21ED6F4C4002060F0 /* InstabugCodingTaskTests.m */,
 				969B3CF41ED6F4C4002060F0 /* Info.plist */,
+				961F95941ED85BB0001CFC14 /* InstaNetworkingTests.m */,
 			);
 			path = InstabugCodingTaskTests;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				969B3CF31ED6F4C4002060F0 /* InstabugCodingTaskTests.m in Sources */,
+				961F95951ED85BB0001CFC14 /* InstaNetworkingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
