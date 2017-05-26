@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "InstaNetworking.h"
-#import "InstaImageView.h"
+
 
 @interface ViewController ()
 
@@ -65,9 +65,11 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    _imgV.backgroundColor = [UIColor redColor];
-    [self.view addSubview:_imgV];
-    [_imgV setImageWithURL:[NSURL URLWithString:@"http://www.epoojastore.in/image/cache/catalog/Products/Mats-New-Small--1000x1000.jpg"]];
+    /*
+     _imgV.backgroundColor = [UIColor redColor];
+     [self.view addSubview:_imgV];
+     [_imgV setImageWithURL:[NSURL URLWithString:@"http://www.epoojastore.in/image/cache/catalog/Products/Mats-New-Small--1000x1000.jpg"]];
+     */
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

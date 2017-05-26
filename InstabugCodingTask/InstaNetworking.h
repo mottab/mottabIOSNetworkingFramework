@@ -10,6 +10,7 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 #import "Reachability.h"
 #import "MyOpeation.h"
+#import "InstaImageView.h"
 
 @interface InstaNetworking : NSObject
 {
