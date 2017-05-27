@@ -27,3 +27,9 @@ To make ImageRequest do call ``` setImageWithURL ``` to the imageView property:
 ```
 [_imgV setImageWithURL:[NSURL URLWithString:@"http://www.epoojastore.in/image/cache/catalog/Products/Mats-New-Small--1000x1000.jpg"]];
 ```
+
+Now go to ``` Info.plist ``` file and add the following: ``` Required background modes ``` array and add item ``` App downloads content from the network ```
+
+Then add AppTransport to the info file ``` App Transport Security Settings ``` Dictionary and add child ``` Allow Arbitrary Loads ``` to Boolean ``` YES ```
+
+Then go to build setting and set enable ``` bitcode  ``` to  ``` NO ```
