@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface InstabugCodingTaskTests : XCTestCase
+@interface InstaNetworkingTaskTests : XCTestCase
 
 @end
 
-@implementation InstabugCodingTaskTests
+@implementation InstaNetworkingTaskTests
 
 - (void)setUp {
     [super setUp];
